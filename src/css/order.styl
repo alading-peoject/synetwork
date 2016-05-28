@@ -1,65 +1,80 @@
 order()
 	.order
 		.item
-			border 1px solid #5D9DDA
-			margin-top 5px
+			border 0.1rem solid #5D9DDA
+			margin 0 1.0rem
+			margin-top 1.5rem
 			.title
-				border-bottom 1px solid #5d9dda
+				border-bottom 0.1rem solid #5d9dda
 			.cont
-				padding 20px
+				padding 2.0rem
 		.title 
-			overflow hidden
-			height 28px
-			line-height 28px
+			display flex
+			padding 0.6rem 0
 			.No
-				float left
+				flex 1
 				color #0000ff
-				margin-left 10px
+				margin-left 1.0rem
 			.status
-				float right
+				flex 1
 				color #ED7E31
-				margin-right 10px
+				margin-right 1.0rem
+				text-align right
 		.cont
 			.cont-on
-				overflow hidden
+				display flex
+				height 8.8rem
+				text-align center
 			.cont-down
-				margin-top 10px
+				display flex
+				text-align center
+				justify-content center
+				margin-top 2.0rem
 		.cont-on
 			.name
-				float left
-				width 88px
-				height 88px
-				line-height 80px
+				flex 1
+				width 8.8rem
+				height 100%
+				line-height 100%
+				vertical-align middle
 				background #aadd00
 			.detail
-				float right
+				flex 1
+				text-align left
+				margin-left 2.0rem
+		.name
+			h2
+				height 60%
+				vertical-align middle
+			strong
+				height 40%
+				display block
+				vertical-align middle
 		.detail
 			.title
-				font-size 14px
+				font-size 1.4rem
 				color #ED7E31
 				border none
 			.price
-				font-size 12px
+				font-size 1.2rem
 				color #0000ff
 			.number
-				font-size 12px
+				font-size 1.2rem
 				color #0000ff
 		.cont-down
-			overflow hidden
-			text-align center
 			.message
-				width 40%
-				height 32px
-				line-height 32px
+				width 55%
+				height 3.2rem
+				line-height 3.2rem
 				background #5D9DDA
 				color #fff
 				display inline-block
-				padding 0 10px
+				padding 0 1.0rem
 			.button
-				
-				width 20%
-				height 30px
-				line-height 30px
-				border 1px solid #ED7E31
+				width 35%
+				height 3.0rem
+				line-height 3.0rem
+				border 0.1rem solid #ED7E31
 				color #ED7E31
 				display inline-block
+				margin-left 1.0rem
