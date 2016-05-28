@@ -1,0 +1,37 @@
+extends ../common/layout
+block content
+  - var title = '推荐商家';
+  div(class="list")
+    include ../common/header
+    div(class="content")
+      div(class="navigator")
+        a(class="sub" href="#") 智能排序
+        a(class="sub" href="#") 我附件
+        a(class="sub" href="#") 省份
+        a(class="sub" href="#") 城市
+      div(class="detail")
+        ul(class="menu")
+          li(class="sub")
+            a(href="#") 餐饮
+          li(class="sub")
+            a(href="#") 景点
+          li(class="sub")
+            a(href="#") 酒店
+          li(class="sub")
+            a(href="#") 休闲
+          li(class="sub")
+            a(href="#") 娱乐
+          li(class="sub")
+            a(href="#") KTV
+        div(class="main")
+          div(class="item")
+            div(class="pic") 我是图片
+            div(class="note")
+              p(class="name") 美美蛋糕店
+              p(class="service") 送礼、预定等服务
+              p(class="extral")
+                span
+                  em ¥200
+                  | 起
+                strong <100m
+    include ../common/footer

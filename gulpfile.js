@@ -8,6 +8,7 @@ var stylus = require('gulp-stylus');
 var uglify = require('gulp-uglify');
 var del = require('del');
 var connect = require('gulp-connect');
+var jade = require('gulp-jade');
 
 var paths = {
   build: './build/' + jsonObj.name + '/' + jsonObj.version
@@ -16,10 +17,14 @@ var paths = {
 gulp.task('clean',function(cb){
   del(['build'], cb);
 });
-gulp.task('copy-html', function() {
- 	gulp.src('./src/**/*.html')
+
+var YOUR_LOCALS = {};
+gulp.task('jadeCompile',['stylCompile'],function(){
+ 	gulp.src('./src/**/*.jade')
+    .pipe(jade({
+      locals: YOUR_LOCALS
+    }))
     .pipe(gulp.dest(paths.build))
-    .pipe(connect.reload())
 });
 
 gulp.task('stylCompile', function() {
@@ -29,7 +34,6 @@ gulp.task('stylCompile', function() {
     }))
     // .pipe(stylus())
     .pipe(gulp.dest(paths.build))
-    .pipe(connect.reload())
 });
 
 gulp.task('reload', function () {
@@ -38,8 +42,7 @@ gulp.task('reload', function () {
 });
 
 gulp.task('watch', function () {
-  gulp.watch(['./src/**/*.html'], ['copy-html']);
-  gulp.watch(['./src/**/bundle.styl'], ['stylCompile']);
+  gulp.watch(['./src/**/*.*'],['jadeCompile']);
   gulp.watch(['./build/**/*.*'], ['reload']);
 });
 

@@ -1,0 +1,25 @@
+extends ../common/layout
+block content
+  - var title = '商家优惠券订单';
+  div(class="order")
+    include ../common/header
+    div(class="content")
+      div(class="item")
+        div(class="title")
+          div(class="No") 2016029837261
+          div(class="status") 已付款
+        div(class="cont")
+          div(class="cont-on")
+            div(class="name")
+              h2 我是一个可爱的表情
+              strong 官很长的名字
+            div(class="detail")
+              p(class="title") 满100只要80元+20元宝
+              p(class="price") 
+                | 价格：¥100
+                em 最多可用20元
+              p(class="number") 数量：x1
+          div(class="cont-down")
+            span(class="message") 共1件商品 合计:80(含20元宝)
+            a(class="button" href="#") 确认完成
+    include ../common/footer

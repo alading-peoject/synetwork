@@ -1,0 +1,24 @@
+extends ../common/layout
+block content
+  - var title = '美美蛋糕店';
+  div(class="detail")
+    include ../common/header
+    div(class="content")
+      div(class="slide")
+        img(src="")
+      div(class="general")
+        h2(class="title") #{title}
+        div(class="cont")
+          em(class="note") xxxxx
+          strong(class="tel") 商家电话：0571-5811111
+      div(class="recommen")
+        span
+          em
+          strong 新华路，格林联盟酒店2楼
+        span >
+      div(class="coupon")
+        span 优惠信息：满100只要80元+20元宝
+        span >
+      div(class="notice") 购买须知
+      div(class="codation") 这里是商家优惠信息的内容和使用条件
+    include ../common/footer
