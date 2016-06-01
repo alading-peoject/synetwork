@@ -19,6 +19,7 @@ gulp.task('clean',function(cb){
 });
 
 var YOUR_LOCALS = {};
+
 gulp.task('jadeCompile',['stylCompile'],function(){
  	gulp.src('./src/**/*.jade')
     .pipe(jade({
