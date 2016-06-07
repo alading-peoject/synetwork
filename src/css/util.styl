@@ -1,0 +1,52 @@
+$default-font-size = 20; 
+//rem万金油
+$rem(){ 
+  val = ''
+  for n in arguments {
+    if n is 'auto' {
+      val = val+ 'auto '
+    }else{
+      val = val+ unit(n /$default-font-size, rem) + ' '
+    }
+  }
+  return s(val)
+}
+
+
+//每个元素拥有的方法
+$setSize(width=100%,height,display=block)
+	width width
+	height height
+	display display
+
+$setColor(backgroundColor=transparent,color=transparent,borderColor=transparent)
+	background-color backgroundColor
+	color color
+	border-color borderColor
+
+$setBackground(imgUrl,isRepeat=no-repeat,pos=center center,size=contain)
+	background-image url(imgUrl)
+	background-repeat isRepeat
+	background-position pos
+	background-size size
+
+$setText(size=size,weight=noraml)
+	font-size size
+	font-weight normal
+
+$setFlex(hAlign=center,vAlign=center,direction=row)
+	display flex
+	justify-content hAlign
+	align-items vAlign
+	flex-direction direction
+
+$setPosition(position,left,top,right,bottom)
+	position position
+	if left
+		left left 
+	if right
+		right right
+	if top
+		top top
+	if bottom  
+		bottom bottom

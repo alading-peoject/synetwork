@@ -1,48 +1,41 @@
 order()
 	.order
 		.item
-			border 0.1rem solid #5D9DDA
-			margin 0 1.0rem
-			margin-top 1.5rem
 			.title
-				border-bottom 0.1rem solid #5d9dda
+				$setSize(,$rem(106px))
+				$setFlex()
+				border-bottom 0.1rem solid #cbcbcb
+				$setColor(#efefef,#a9a9a9)
 			.cont
-				padding 2.0rem 1.5rem
+				padding $rem(54px 38px)
 		.title 
 			display flex
 			padding 0.6rem 0
 			.No
 				flex 1
-				color #0000ff
+				$setColor(#efefef,#a9a9a9)
 				margin-left 1.0rem
+				$setText($rem(33px))
 			.status
 				flex 1
-				color #ED7E31
+				$setColor(#efefef,#a9a9a9)
 				margin-right 1.0rem
 				text-align right
+				$setText($rem(33px))
 		.cont
-			.cont-on
-				display flex
-				height 8.8rem
-				text-align center
-			.cont-down
-				display flex
-				text-align center
-				justify-content center
-				margin-top 2.0rem
+			.cont-on,.cont-down
+				$setFlex()
 		.cont-on
 			.name
-				flex 1
-				width 8.8rem
-				height 100%
-				line-height 100%
-				vertical-align middle
-				background #aadd00
-			.detail
-				flex 1
+				width 33.4%
+			.item-detail
+				flex 2
 				text-align left
-				margin-left 2.0rem
+				margin-left $rem(20px)
 		.name
+			text-align center
+			img
+				max-width 100%
 			h2
 				height 60%
 				vertical-align middle
@@ -50,31 +43,48 @@ order()
 				height 40%
 				display block
 				vertical-align middle
-		.detail
-			.title
+		.item-detail
+			.item-detail-sub
+				margin-bottom $rem(5px)
+			.detail-title
+				padding $rem(10px 0 10px 0)
+				$setColor(,#000)
+				$setText($rem(33px))
+			.detail-cont
 				font-size 1.4rem
 				color #ED7E31
 				border none
+				$setText($rem(33px))
+				$setColor(,#a9a9a9)
+			.dele
+				$setSize($rem(40px),$rem(40px),inline-block)
+				text-align center
+				line-height $rem(40px)
+				vertical-align middle
+				$setColor(#ff635b,#ffffff)
+				border-radius $rem(5px)
 			.price
 				font-size 1.2rem
-				color #0000ff
+				$setColor(,#000000)
+				$setText($rem(33px))
+				em
+					$setColor(,#a9a9a9)
 			.number
+				
 				font-size 1.2rem
-				color #0000ff
+				$setColor(,#000000)
+				$setText($rem(33px))
 		.cont-down
+			margin-top $rem(40px)
+			$setFlex(space-between)
 			.message
-				width 55%
-				height 3.2rem
-				line-height 3.2rem
-				background #5D9DDA
-				color #fff
-				display inline-block
-				padding 0 1.0rem
+				flex 2
+				color #000000
+				$setText($rem(33px))
 			.button
-				width 35%
-				height 3.0rem
-				line-height 3.0rem
-				border 0.1rem solid #ED7E31
-				color #ED7E31
-				display inline-block
-				margin-left 1.0rem
+				text-align center
+				line-height $rem(72px)
+				border-radius $rem(5px)
+				$setSize(29.3%,$rem(72px))
+				$setColor(#ffc000,#772b00)
+				$setText($rem(33px))

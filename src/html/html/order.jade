@@ -1,7 +1,7 @@
 extends ../common/layout
 block content
   - var title = '商家优惠券订单';
-  div(class="order")
+  div(class="order container")
     include ../common/header
     div(class="content")
       div(class="item")
@@ -11,14 +11,17 @@ block content
         div(class="cont")
           div(class="cont-on")
             div(class="name")
-              h2 我是一个可爱的表情
-              strong 官很长的名字
-            div(class="detail")
-              p(class="title") 满100只要80元+20元宝
-              p(class="price") 
-                | 价格：¥100
-                em 最多可用20元
-              p(class="number") 数量：x1
+              img(src="../../images/3_03.jpg")
+            div(class="item-detail")
+              p(class="detail-title")
+                | 美味蛋糕
+              p(class="item-detail-sub detail-cont") 
+                em(class="dele") 减
+                | 满100只要80元+20元宝
+              p(class="item-detail-sub price") 
+                | 单价:¥100
+                em (最多可用20元)
+              p(class="item-detail-sub number") 数量：x1
           div(class="cont-down")
             span(class="message") 共1件商品 合计:80(含20元宝)
             a(class="button" href="#") 确认完成
@@ -29,14 +32,17 @@ block content
         div(class="cont")
           div(class="cont-on")
             div(class="name")
-              h2 我是一个可爱的表情
-              strong 官很长的名字
-            div(class="detail")
-              p(class="title") 满100只要80元+20元宝
-              p(class="price") 
-                | 价格：¥100
-                em 最多可用20元
-              p(class="number") 数量：x1
+              img(src="../../images/3_03.jpg")
+            div(class="item-detail")
+              p(class="detail-title")
+                | 美味蛋糕
+              p(class="item-detail-sub detail-cont") 
+                em(class="dele") 减
+                | 满100只要80元+20元宝
+              p(class="item-detail-sub price") 
+                | 单价:¥100
+                em (最多可用20元)
+              p(class="item-detail-sub number") 数量：x1
           div(class="cont-down")
             span(class="message") 共1件商品 合计:80(含20元宝)
             a(class="button" href="#") 确认完成

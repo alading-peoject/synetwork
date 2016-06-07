@@ -1,33 +1,68 @@
 detail()
 	.detail
-		.slide,.general,.recommen,.coupon,.notice,.codation
-			border 0.1rem solid #5D9DDA
+		.general,.recommen,.coupon,.codation
 			padding 0.5rem 2.0rem
 			margin-bottom 0.5rem
 		.slide
-			height 14.0rem
-			width 100%
+			text-align center
 			img
-				max-width 10.0rem
+				max-width 100%
 		.general
+			$setFlex()
+			.menu
+				width 18%
+				margin-right 4%
+				$setFlex()
+			.main
+				flex 2
+			.menu img
+				max-width 100%
 			.title
-				text-align center
-				font-size 1.4rem
-				color #0000ff
+				text-align left
+				font-size $rem(48px)
+				color #010101
 				margin-bottom 1.0rem
 			.cont
-				display flex
-				font-size 1.2rem
-				.note
-					color #ccc
-					flex 1
-					text-align left
-				.tel
-					color #000000
-					flex 1
-					text-align right
+				.item
+					margin-bottom $rem(16px)
+					font-size $rem(33px)
+					height $rem(40px)
+					line-height @height
+					strong
+						font-weight normal
+					img
+						max-width $rem(40px)
+						margin-right $rem(10px) 
+		.coupon
+			border-top $rem(1px) solid #d9d9d9
+			padding $rem(20px 0) 
+			span
+				width 76%
+				margin-left 24%
+				display block
+				$setText($rem(33px))
+				line-height $rem(80px)
+				em
+					$setSize($rem(40px),$rem(40px),inline-block)
+					border-radius $rem(5px)
+					text-align center
+					line-height $rem(40px)
+					margin-right $rem(20px)
+				.del
+					$setColor(#ff635b,#fff) 
+				.first
+					$setColor(#ffa627,#fff)
+				.free
+					$setColor(#3cb393,#fff)
 		.notice
-			height 
-		.codation
-			padding 2.0rem
-			text-align 2.0rem
+			h3
+				height $rem(100px)
+				$setFlex(flex-start)
+				$setColor(#efefef,#000000)
+				$setText($rem(40px))
+				text-indent $rem(20px)
+			.cont
+				padding $rem(20px)
+			.codation
+				$setText($rem(33px))
+				line-height $rem(28px)

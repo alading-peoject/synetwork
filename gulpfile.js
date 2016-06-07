@@ -20,11 +20,16 @@ gulp.task('clean',function(cb){
 
 var YOUR_LOCALS = {};
 
-gulp.task('jadeCompile',['stylCompile'],function(){
+gulp.task('jadeCompile',['stylCompile','copyImage'],function(){
  	gulp.src('./src/**/*.jade')
     .pipe(jade({
       locals: YOUR_LOCALS
     }))
+    .pipe(gulp.dest(paths.build))
+});
+
+gulp.task('copyImage', function() {
+  gulp.src(['./src/**/*.jpg','./src/**/*.png'])
     .pipe(gulp.dest(paths.build))
 });
 

@@ -1,23 +1,40 @@
+@import "./util"
 general()
 	html
 		font-size 62.5%
+		height 100%
 	body 
-		font-size 1.4rem
-	/*头部*/
-	.header h1 
+		font-size $rem(14px)
+		height 100%
+		overflow hidden
+	.container
+		$setFlex(,,column)
 		width 100%
-		height 4.4rem
-		line-height 4.4rem
-		text-align center
-		background  #ed7e31
-		color #fff
-		font-size 2.2rem
+		height 100%
+	/*头部*/
+	.header
+		width 100% 
+		height $rem(136px)
+		$setFlex()
+		h1
+			flex 1
+			height 100%
+			background  #ffc000
+			color #772b00
+			font-size $rem(48px)
+			$setFlex()
 	.content
 		width 100%
+		flex 2
+		overflow-y auto
+		overflow-x hidden
 	.footer
+		$setFlex()
 		width 100%
-		text-align center
-		color #64a5dd
-		margin-top 3.0rem
-		border-top 0.1rem solid #5D9DDA
-		padding-top 1.0rem
+		height $rem(138px)
+		background #efefef
+		.copyright
+			flex 1		
+			color #a9a9a9
+			font-size $rem(33px)
+			text-align center
