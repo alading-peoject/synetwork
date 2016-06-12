@@ -1,6 +1,11 @@
 @import "./util"
 
 list()
+	.no-list
+		text-align center
+		padding $rem(50px 20px)
+		font-size $rem(33px)
+		border $rem(1px) solid #d9d9d9
 	.list
 		.content
 			padding-bottom $rem(20px)
@@ -42,11 +47,11 @@ list()
 			$setFlex()
 			border $rem(1px) solid #d9d9d9
 			margin-bottom $rem(5px)
+			display none
 		.main .item
 			.pic
 				width 44.4%
 				height 100%
-				background #00ffdd
 				text-align center
 				img
 					max-width 100%
