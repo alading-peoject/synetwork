@@ -20,10 +20,11 @@ gulp.task('clean',function(cb){
 
 var YOUR_LOCALS = {};
 
-gulp.task('jadeCompile',['stylCompile','copyImage'],function(){
+gulp.task('jadeCompile',['stylCompile','copyImage','copylib','copyJS'],function(){
  	gulp.src('./src/**/*.jade')
     .pipe(jade({
-      locals: YOUR_LOCALS
+      locals: YOUR_LOCALS,
+      pretty: true
     }))
     .pipe(gulp.dest(paths.build))
 });
@@ -31,6 +32,14 @@ gulp.task('jadeCompile',['stylCompile','copyImage'],function(){
 gulp.task('copyImage', function() {
   gulp.src(['./src/**/*.jpg','./src/**/*.png'])
     .pipe(gulp.dest(paths.build))
+});
+gulp.task('copyJS', function() {
+  gulp.src(['./src/js/**/*.js'])
+    .pipe(gulp.dest(paths.build+'/js'))
+});
+gulp.task('copylib', function() {
+  gulp.src(['./lib/**/*.*'])
+    .pipe(gulp.dest(paths.build+"/lib"))
 });
 
 gulp.task('stylCompile', function() {

@@ -54,7 +54,7 @@ list()
 				flex 2
 		.note
 			p 
-				padding-left 11.5%
+				margin-left 11.5%
 				color #4b4b4b
 			.name
 				text-align left
@@ -68,7 +68,40 @@ list()
 			.extral
 				font-size $rem(30px)
 				$setFlex(space-between)
-				
+			.level
+				background-image url("../images/1_05.jpg")
+				background-repeat no-repeat
+				background-size 100% 100%
+				$setSize($rem(213px),$rem(29px))
+				position relative
+				left 0
+				top 0
+				margin $rem(10px 0px)
+				margin-left 11.5%
+				&:before 
+					height $rem(30px)
+					background-image url("../images/1_04.jpg")
+					background-size $rem(213px) $rem(29px)
+					background-position right top
+					position absolute
+					right 0
+					top 0 
+					content " "
+			.level1
+				&:before
+					width $rem(42px)
+			.level2
+				&:before
+					width $rem(84px)
+			.level3
+				&:before
+					width $rem(126px)
+			.level4
+				&:before
+					width $rem(168px)
+			.level5
+				&:before
+					width $rem(213px)
 		.extral
 			span
 				$setFlex(space-between)

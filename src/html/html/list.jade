@@ -7,8 +7,14 @@ block content
       div(class="navigator")
         a(class="sub" href="#") 智能排序
         a(class="sub" href="#") 我附件
-        a(class="sub" href="#") 省份
-        a(class="sub" href="#") 城市
+        a(class="sub" href="#")
+          select 省份
+            option 浙江省
+            option 北京市
+        a(class="sub" href="#") 
+          select 城市
+            option 杭州
+            option 金华
       div(class="detail")
         ul(class="menu")
           li(class="sub selected")
@@ -29,21 +35,23 @@ block content
               img(src="../../images/1_03.jpg")
             div(class="note")
               p(class="name") 美美蛋糕店
+              p(class="level level1")
               p(class="service") 送礼、预定等服务
               p(class="extral")
                 span
                   em ¥200
-                  | 起
+                  | 起 
                 strong <100m
           div(class="item")
             div(class="pic") 
               img(src="../../images/1_03.jpg")
             div(class="note")
               p(class="name") 美美蛋糕店
+              p(class="level level1")
               p(class="service") 送礼、预定等服务
               p(class="extral")
                 span
                   em ¥200
-                  | 起
+                  | 起 
                 strong <100m
     include ../common/footer
